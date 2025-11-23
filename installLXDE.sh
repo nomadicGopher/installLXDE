@@ -66,4 +66,4 @@ fi
 echo
 echo "Installation complete."
 echo "Reboot for changes to take effect."
-echo "After reboot, select LXDE from the session menu on the GDM login screen."
+echo "After reboot, upon the login screen, look for a session menu on the GDM login screen & select LXDE."

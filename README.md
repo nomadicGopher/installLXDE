@@ -23,7 +23,7 @@ After the script finishes, **reboot** the device. On the login screen select **L
 | 4 | **Disables GDM3 automatic login** by setting `AutomaticLoginEnable=false` (and commenting out `AutomaticLogin`). |
 | 5 | Reconfigures **GDM3** as the default display manager (`dpkg-reconfigure gdm3`). |
 | 6 | Copies `lxterminal.desktop` to the user's `~/Desktop` folder. |
-| 7 | Prompts the user to reboot. |
+| 7 | Prompts the user to reboot & manually select the LXDE session. |
 
 ### Selecting the display manager  
 
