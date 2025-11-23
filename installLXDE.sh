@@ -8,13 +8,13 @@ set -e   # stop on first error
 # 1. Update package sources
 # ----------------------------------------------------------------------
 echo "Updating package lists..."
-sudo apt-get update
+sudo apt update
 
 # ----------------------------------------------------------------------
 # 2. Install LXDE and the Compton compositor
 # ----------------------------------------------------------------------
 echo "Installing LXDE and compton..."
-sudo apt-get install -y lxde compton
+sudo apt install -y lxde compton
 
 # ----------------------------------------------------------------------
 # 3. Autostart Compton for LXDE

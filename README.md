@@ -17,7 +17,7 @@ After the script finishes, **reboot** the device. On the login screen select **L
 
 | Step | Action |
 |------|--------|
-| 1 | Updates APT package lists (`apt-get update`). |
+| 1 | Updates APT package lists (`apt update`). |
 | 2 | Installs `lxde` and `compton`. |
 | 3 | Creates `/etc/xdg/autostart/lxde-compton.desktop` to launch Compton with the GLX backend. |
 | 4 | **Disables GDM3 automatic login** by setting `AutomaticLoginEnable=false` (and commenting out `AutomaticLogin`). |
