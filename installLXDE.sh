@@ -1,5 +1,5 @@
 #!/bin/bash
-# Install LXDE (Lightweight Desktop Environment) on a NVIDIA Jetson Orin Nano
+# Install LXDE (Lightweight Desktop Environment) on a NVIDIA Jetson Developer Kits 
 # using GDM3 as the display manager
 
 # Update package sources

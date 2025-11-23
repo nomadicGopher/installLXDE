@@ -1,31 +1,35 @@
-# installLXDE
-Install LXDE on the NVIDIA Jetson Developer Kits
+## installLXDE  
+Install LXDE on NVIDIA Jetson Developer Kits (JetPack 5.3)
 
-For versions of JetPack 4.4 and below. JetPack 4.4.1+ have LXDE already installed.
+### Overview  
+This script installs the **LXDE** desktop environment and the **Compton** compositor, then configures **GDM3** as the display manager. It also creates a desktop shortcut for LXTerminal.
 
-You can save a significant amount of main memory by running a different Ubuntu desktop environment.
-LXDE is a lightweight desktop enviornment which saves 500-750MB.
+### Usage  
 
-The script installLXDE.sh installs LXDE, LightDM (a desktop manager), and Compton which is a desktop compositor.
-
+```bash
+$ chmod +x installLXDE.sh
 $ ./installLXDE.sh
+```
 
-In order to use Compton and entry is placed in /etc/xdg/autostart describing the compositor. Also, the script sets lightdm to be the default display manager (gdm3 is the default GNOME/Unity display manager installed by JetPack).
+After the script finishes, **reboot** the device. On the login screen select **LXDE** as the session before logging in.
 
-A desktop shortcut to LXDE Terminal is placed on the desktop. This shortcut is only shown when using LXDE.
+### What the script does  
 
-In order to switch between lightdm and gdm3, you can use the command:
+| Step | Action |
+|------|--------|
+| 1 | Updates APT package lists (`apt-get update`). |
+| 2 | Installs `lxde` and `compton`. |
+| 3 | Creates `/etc/xdg/autostart/lxde-compton.desktop` to launch Compton with the GLX backend. |
+| 4 | Reconfigures **GDM3** as the default display manager (`dpkg-reconfigure gdm3`). |
+| 5 | Copies `lxterminal.desktop` to the user's `~/Desktop` folder. |
+| 6 | Prompts the user to reboot. |
 
-$ sudo dpkg-reconfigure lightdm
+### Background wallpaper  
 
-The default background desktop wallpaper is in a file named NVIDIA_wallpaper.jpg. It is in the /usr/share/backgrounds/ directory in JetPack 4.4.
+The default Jetson background (`NVIDIA_wallpaper.jpg`) is located at:
 
-Enjoy
+```
+/usr/share/backgrounds/NVIDIA_wallpaper.jpg
+```
 
-<h3>Release Notes</h3>
-
-<h4>Initial Release</h4>
-* November 2020
-* Tested on Jetson Nano
-* Should work on other Jetsons as well
-
+Enjoy a faster, lighter desktop experience!
