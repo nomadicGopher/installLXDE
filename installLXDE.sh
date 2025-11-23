@@ -57,7 +57,7 @@ if [[ -f lxterminal.desktop ]]; then
     echo "Copying LXTerminal desktop file to the user's Desktop..."
     cp lxterminal.desktop "$HOME/Desktop/lxterminal.desktop"
 else
-    echo "Warning: lxterminal.desktop not found – skipping copy."
+    echo "Warning: lxterminal.desktop not found - skipping copy."
 fi
 
 # ----------------------------------------------------------------------

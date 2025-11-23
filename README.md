@@ -7,8 +7,8 @@ This script installs the **LXDE** desktop environment and the **Compton** compos
 ### Usage  
 
 ```bash
-$ chmod +x installLXDE.sh
-$ ./installLXDE.sh
+chmod +x installLXDE.sh
+./installLXDE.sh
 ```
 
 After the script finishes, **reboot** the device. On the login screen select **LXDE** as the session before logging in. Because automatic login is disabled, you will be prompted for your password each boot.
@@ -24,6 +24,10 @@ After the script finishes, **reboot** the device. On the login screen select **L
 | 5 | Reconfigures **GDM3** as the default display manager (`dpkg-reconfigure gdm3`). |
 | 6 | Copies `lxterminal.desktop` to the user's `~/Desktop` folder. |
 | 7 | Prompts the user to reboot. |
+
+### Selecting the display manager  
+
+If the script prompts you to choose a display manager, **select `gdm3`** from the list. This ensures the system uses GDM3, which the script then configures.
 
 ### Background wallpaper  
 
